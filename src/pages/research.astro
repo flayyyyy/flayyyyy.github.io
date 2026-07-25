@@ -8,19 +8,27 @@ import Base from "@/layouts/Base.astro";
   <!-- Hero -->
   <section class="hero">
     <div>
-      <h2>Exploring Quantum Matter</h2>
+      <h2>Research Overview</h2>
 
       <p>
-        My research lies broadly in condensed matter physics, with particular
-        interests in superconductivity, quantum materials, and quantum
-        transport. I use theoretical and computational techniques to study
-        emergent electronic phenomena in low-dimensional systems.
+        My research lies at the intersection of condensed matter physics and
+        quantum information science. I am interested in understanding quantum
+        phenomena in superconducting systems and developing techniques that
+        advance superconducting quantum technologies.
+      </p>
+
+      <p>
+        I enjoy combining theoretical modelling, numerical simulations, and
+        computational methods to investigate problems in superconductivity,
+        quantum transport, and quantum materials. More recently, my work has
+        expanded towards applying machine learning to superconducting quantum
+        circuits and quantum control.
       </p>
     </div>
 
     <img
-      src="/images/research/superconductivity.png"
-      alt="Superconductivity illustration"
+      src="/images/research/hero.jpg"
+      alt="Superconducting quantum circuit"
     />
   </section>
 
@@ -30,82 +38,97 @@ import Base from "@/layouts/Base.astro";
 
     <div class="cards">
       <article class="card">
-        <img src="/images/research/superconductor.png" alt="" />
-        <h3>Superconductivity</h3>
-        <p>
-          Electronic transport, superconducting junctions, and unconventional
-          superconductors.
-        </p>
+        <img src="/images/research/qubits.jpg" alt="" />
+
+        <div class="content">
+          <h3>Superconducting Quantum Circuits</h3>
+
+          <p>
+            Control, measurement, and optimization of superconducting qubits,
+            with an emphasis on scalable quantum computing architectures.
+          </p>
+        </div>
       </article>
 
       <article class="card">
-        <img src="/images/research/topology.png" alt="" />
-        <h3>Quantum Materials</h3>
-        <p>
-          Emergent phases of matter, topology, and strongly correlated systems.
-        </p>
+        <img src="/images/research/superconductivity.jpg" alt="" />
+
+        <div class="content">
+          <h3>Superconductivity</h3>
+
+          <p>
+            Josephson junctions, Andreev reflection, superconducting pairing,
+            and transport in hybrid superconducting systems.
+          </p>
+        </div>
       </article>
 
       <article class="card">
-        <img src="/images/research/transport.png" alt="" />
-        <h3>Quantum Transport</h3>
-        <p>
-          Numerical studies of transport phenomena in mesoscopic systems.
-        </p>
+        <img src="/images/research/kagome.jpg" alt="" />
+
+        <div class="content">
+          <h3>Quantum Materials</h3>
+
+          <p>
+            Emergent electronic phases, unconventional superconductivity,
+            topology, and strongly correlated materials.
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="/images/research/computation.jpg" alt="" />
+
+        <div class="content">
+          <h3>Computational Physics</h3>
+
+          <p>
+            Numerical modelling, scientific machine learning, atomistic
+            simulations, and computational approaches to condensed matter
+            physics.
+          </p>
+        </div>
       </article>
     </div>
   </section>
 
-  <!-- Current Research -->
+  <!-- Current Directions -->
   <section class="two-column">
     <img
-      src="/images/research/josephson.png"
-      alt="Josephson junction"
+      src="/images/research/current.jpg"
+      alt="Quantum device"
     />
 
     <div>
-      <h2>Current Research</h2>
+      <h2>Current Directions</h2>
 
       <p>
-        My doctoral research focuses on superconducting systems and their
-        electronic properties. I am particularly interested in understanding
-        transport phenomena through theoretical modelling and numerical
-        simulations.
+        My current research focuses on machine-learning assisted optimization
+        of superconducting qubit control and readout, alongside the study of
+        superconducting devices and quantum measurement techniques.
+      </p>
+
+      <p>
+        More broadly, I am interested in connecting ideas from condensed matter
+        physics with emerging quantum technologies, bridging theoretical models
+        with experimentally relevant systems.
       </p>
     </div>
   </section>
 
-  <!-- Current Topics -->
+  <!-- Methods -->
   <section class="section">
-    <h2>Current Topics</h2>
+    <h2>Methods &amp; Tools</h2>
 
-    <ul>
+    <ul class="methods">
       <li>Bogoliubov–de Gennes formalism</li>
-      <li>Josephson junctions</li>
-      <li>Andreev reflection</li>
-      <li>Topological superconductivity</li>
-      <li>Quantum transport</li>
+      <li>Quantum transport calculations</li>
+      <li>Scientific machine learning</li>
+      <li>Numerical simulations</li>
+      <li>Python, PyTorch, QuTiP &amp; scqubits</li>
+      <li>HFSS, ADS &amp; Microwave Office</li>
+      <li>Device fabrication &amp; characterization</li>
     </ul>
-  </section>
-
-  <!-- Timeline -->
-  <section class="section">
-    <h2>Research Journey</h2>
-
-    <div class="timeline">
-      <div>
-        <strong>2025</strong>
-        <p>Started PhD at TIFR.</p>
-      </div>
-
-      <div>
-        <strong>Present</strong>
-        <p>
-          Working on theoretical and computational studies of superconducting
-          systems.
-        </p>
-      </div>
-    </div>
   </section>
 </Base>
 
@@ -113,22 +136,24 @@ import Base from "@/layouts/Base.astro";
 .hero {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .hero img {
+  width: 100%;
   border-radius: 12px;
+  object-fit: cover;
 }
 
 .section {
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
 }
 
@@ -140,36 +165,41 @@ import Base from "@/layouts/Base.astro";
 
 .card img {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
-.card h3,
-.card p {
-  padding-inline: 1rem;
+.card .content {
+  padding: 1rem;
 }
 
-.card p {
-  padding-bottom: 1rem;
+.card h3 {
+  margin-top: 0;
 }
 
 .two-column {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
 }
 
 .two-column img {
+  width: 100%;
   border-radius: 12px;
 }
 
-.timeline {
-  border-left: 2px solid var(--accent);
-  padding-left: 1.5rem;
+.methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem 2rem;
+  padding-left: 1.25rem;
 }
 
-.timeline > div {
-  margin-bottom: 2rem;
+@media (max-width: 900px) {
+  .hero,
+  .two-column {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
