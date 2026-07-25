@@ -1,5 +1,6 @@
 ---
 import PageLayout from "@/layouts/Base.astro";
+import SocialList from "@/components/SocialList.astro";
 
 const meta = {
 	description: "I'm a starter theme for Astro.build",
@@ -11,26 +12,8 @@ const meta = {
 	<h1 class="title mb-12">About</h1>
 	<div class="prose prose-sm prose-cactus max-w-none">
 		<p>
-			Hi, I’m a starter Astro. I’m particularly great for getting you started with your own blogging
-			website.
+			I'm currently a research scholar and a PhD candidate in the Department of Condensed Matter Physics & Materials Science (DCMPMS) at the Tata Institute of Fundamental Research (TIFR), Mumbai, working on optimizing control and readout signals of superconducting qubits using machine learning. On a bigger scale, my aim is to contribute towards building fault-tolerant quantum computers. My past research interests have been in studying condensed matter systems that host novel states of matter and using atomistic simulations to calculate material properties.
 		</p>
-		<p>Here are my some of my awesome built in features:</p>
-		<ul class="list-inside list-disc" role="list">
-			<li>I'm ultra fast as I'm a static site</li>
-			<li>I'm fully responsive</li>
-			<li>I come with a light and dark mode</li>
-			<li>I'm easy to customise and add additional content</li>
-			<li>I have Tailwind CSS styling</li>
-			<li>Shiki code syntax highlighting</li>
-			<li>Satori for auto generating OG images for blog posts</li>
-		</ul>
-		<p>
-			Clone or fork my <a
-				class="cactus-link inline-block"
-				href="https://github.com/chrismwilliams/astro-cactus"
-				rel="noreferrer"
-				target="_blank">repo</a
-			> if you like me!
-		</p>
+		<SocialList />
 	</div>
 </PageLayout>

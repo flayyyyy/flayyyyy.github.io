@@ -1,0 +1,175 @@
+---
+import Base from "@/layouts/Base.astro";
+---
+
+<Base meta={{ title: "Research" }}>
+  <h1 class="mb-8">Research</h1>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h2>Exploring Quantum Matter</h2>
+
+      <p>
+        My research lies broadly in condensed matter physics, with particular
+        interests in superconductivity, quantum materials, and quantum
+        transport. I use theoretical and computational techniques to study
+        emergent electronic phenomena in low-dimensional systems.
+      </p>
+    </div>
+
+    <img
+      src="/images/research/superconductivity.png"
+      alt="Superconductivity illustration"
+    />
+  </section>
+
+  <!-- Research Interests -->
+  <section class="section">
+    <h2>Research Interests</h2>
+
+    <div class="cards">
+      <article class="card">
+        <img src="/images/research/superconductor.png" alt="" />
+        <h3>Superconductivity</h3>
+        <p>
+          Electronic transport, superconducting junctions, and unconventional
+          superconductors.
+        </p>
+      </article>
+
+      <article class="card">
+        <img src="/images/research/topology.png" alt="" />
+        <h3>Quantum Materials</h3>
+        <p>
+          Emergent phases of matter, topology, and strongly correlated systems.
+        </p>
+      </article>
+
+      <article class="card">
+        <img src="/images/research/transport.png" alt="" />
+        <h3>Quantum Transport</h3>
+        <p>
+          Numerical studies of transport phenomena in mesoscopic systems.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Current Research -->
+  <section class="two-column">
+    <img
+      src="/images/research/josephson.png"
+      alt="Josephson junction"
+    />
+
+    <div>
+      <h2>Current Research</h2>
+
+      <p>
+        My doctoral research focuses on superconducting systems and their
+        electronic properties. I am particularly interested in understanding
+        transport phenomena through theoretical modelling and numerical
+        simulations.
+      </p>
+    </div>
+  </section>
+
+  <!-- Current Topics -->
+  <section class="section">
+    <h2>Current Topics</h2>
+
+    <ul>
+      <li>Bogoliubov–de Gennes formalism</li>
+      <li>Josephson junctions</li>
+      <li>Andreev reflection</li>
+      <li>Topological superconductivity</li>
+      <li>Quantum transport</li>
+    </ul>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section">
+    <h2>Research Journey</h2>
+
+    <div class="timeline">
+      <div>
+        <strong>2025</strong>
+        <p>Started PhD at TIFR.</p>
+      </div>
+
+      <div>
+        <strong>Present</strong>
+        <p>
+          Working on theoretical and computational studies of superconducting
+          systems.
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.hero img {
+  border-radius: 12px;
+}
+
+.section {
+  margin-top: 4rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.card h3,
+.card p {
+  padding-inline: 1rem;
+}
+
+.card p {
+  padding-bottom: 1rem;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.two-column img {
+  border-radius: 12px;
+}
+
+.timeline {
+  border-left: 2px solid var(--accent);
+  padding-left: 1.5rem;
+}
+
+.timeline > div {
+  margin-bottom: 2rem;
+}
+</style>
