@@ -29,7 +29,7 @@ const {
 	)
 }
 {data.draft ? <span class="text-base text-red-500">(Draft)</span> : null}
-<h1 class="title">
+<h1 class="title" set:html={data.displayTitle ?? data.title} />
 	{data.title}
 </h1>
 <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
