@@ -14,7 +14,7 @@ export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
 	author: "Parth Bahuguna",
 	// Used as the default description meta property and webmanifest description
-	description: "PhD Candidate in Physics at the Tata Institute of Fundamental Research. Research interests include superconducting qubits, quantum computing, condensed matter physics, quantum materials, computational physics, and machine learning.",
+	description: "PhD student, superconducting qubits.",
 	// HTML lang property, found in src/layouts/Base.astro L:18 & astro.config.ts L:48
 	lang: "en-GB",
 	// Meta property, found in src/components/BaseHead.astro L:42
