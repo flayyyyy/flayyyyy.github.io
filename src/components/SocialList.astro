@@ -17,12 +17,22 @@ const socialLinks: {
 		link: "https://github.com/flayyyyy",
 		name: "mdi:github",
 	},
+	{
+		friendlyName: "LinkedIn",
+		link: "https://www.linkedin.com/in/parth-bahuguna/",
+		name: "mdi:linkedin",
+	},
+	{
+	friendlyName: "Google Scholar",
+	link: "https://scholar.google.com/citations?user=svT_p78AAAAJ&hl=en",
+	name: "mdi:school",
+	},
 ];
 ---
 
-<div class="flex flex-wrap items-end gap-x-2">
+<div class="flex flex-wrap items-end">
 	<p>Check out my <a href="https://drive.google.com/file/d/1bcH_kdfVLhrYQWMylXHUiEgtPOFBaojj/view?usp=drive_link" target="_blank" rel="noopener noreferrer">CV</a> or find me on</p>
-	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
+	<ul class="flex items-center gap-x-2">
 		{
 			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
 				<li class="flex">

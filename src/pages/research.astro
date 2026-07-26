@@ -3,203 +3,87 @@ import Base from "@/layouts/Base.astro";
 ---
 
 <Base meta={{ title: "Research" }}>
-  <h1 class="mb-8">Research</h1>
+  <article class="prose">
 
-  <!-- Hero -->
-  <section class="hero">
-    <div>
-      <h2>Research Overview</h2>
+    <h2>Superconducting Quantum Circuits</h2>
 
-      <p>
-        My research lies at the intersection of condensed matter physics and
-        quantum information science. I am interested in understanding quantum
-        phenomena in superconducting systems and developing techniques that
-        advance superconducting quantum technologies.
-      </p>
-
-      <p>
-        I enjoy combining theoretical modelling, numerical simulations, and
-        computational methods to investigate problems in superconductivity,
-        quantum transport, and quantum materials. More recently, my work has
-        expanded towards applying machine learning to superconducting quantum
-        circuits and quantum control.
-      </p>
-    </div>
+    <p>
+      ...
+    </p>
 
     <img
-      src="/images/research/hero.jpg"
-      alt="Superconducting quantum circuit"
+      src="/images/research/qubits.jpg"
+      alt="Superconducting quantum circuits"
     />
-  </section>
 
-  <!-- Research Interests -->
-  <section class="section">
-    <h2>Research Interests</h2>
+    <p>
+      ...
+    </p>
 
-    <div class="cards">
-      <article class="card">
-        <img src="/images/research/qubits.jpg" alt="" />
+    <hr />
 
-        <div class="content">
-          <h3>Superconducting Quantum Circuits</h3>
+    <h2>Superconductivity</h2>
 
-          <p>
-            Control, measurement, and optimization of superconducting qubits,
-            with an emphasis on scalable quantum computing architectures.
-          </p>
-        </div>
-      </article>
+    <p>
+      ...
+    </p>
 
-      <article class="card">
-        <img src="/images/research/superconductivity.jpg" alt="" />
-
-        <div class="content">
-          <h3>Superconductivity</h3>
-
-          <p>
-            Josephson junctions, Andreev reflection, superconducting pairing,
-            and transport in hybrid superconducting systems.
-          </p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="/images/research/kagome.jpg" alt="" />
-
-        <div class="content">
-          <h3>Quantum Materials</h3>
-
-          <p>
-            Emergent electronic phases, unconventional superconductivity,
-            topology, and strongly correlated materials.
-          </p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="/images/research/computation.jpg" alt="" />
-
-        <div class="content">
-          <h3>Computational Physics</h3>
-
-          <p>
-            Numerical modelling, scientific machine learning, atomistic
-            simulations, and computational approaches to condensed matter
-            physics.
-          </p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Current Directions -->
-  <section class="two-column">
     <img
-      src="/images/research/current.jpg"
-      alt="Quantum device"
+      src="/images/research/superconductivity.jpg"
+      alt="Superconductivity"
     />
 
-    <div>
-      <h2>Current Directions</h2>
+    <p>
+      ...
+    </p>
 
-      <p>
-        My current research focuses on machine-learning assisted optimization
-        of superconducting qubit control and readout, alongside the study of
-        superconducting devices and quantum measurement techniques.
-      </p>
+    <hr />
 
-      <p>
-        More broadly, I am interested in connecting ideas from condensed matter
-        physics with emerging quantum technologies, bridging theoretical models
-        with experimentally relevant systems.
-      </p>
-    </div>
-  </section>
+    <h2>Quantum Materials</h2>
 
-  <!-- Methods -->
-  <section class="section">
-    <h2>Methods &amp; Tools</h2>
+    <p>
+      ...
+    </p>
 
-    <ul class="methods">
-      <li>Bogoliubov–de Gennes formalism</li>
-      <li>Quantum transport calculations</li>
-      <li>Scientific machine learning</li>
-      <li>Numerical simulations</li>
-      <li>Python, PyTorch, QuTiP &amp; scqubits</li>
-      <li>HFSS, ADS &amp; Microwave Office</li>
-      <li>Device fabrication &amp; characterization</li>
+    <img
+      src="/images/research/materials.jpg"
+      alt="Quantum materials"
+    />
+
+    <p>
+      ...
+    </p>
+
+    <hr />
+
+    <h2>Publications</h2>
+
+    <ul>
+      <li>...</li>
+      <li>...</li>
     </ul>
-  </section>
+
+  </article>
 </Base>
 
 <style>
-.hero {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  margin-bottom: 5rem;
+.prose {
+  max-width: 760px;
 }
 
-.hero img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
+.subtitle {
+  color: var(--secondary);
+  font-size: 1.05rem;
+  margin-top: -0.5rem;
+  margin-bottom: 3rem;
 }
 
-.section {
-  margin-top: 5rem;
+img {
+  margin: 2rem auto;
+  border-radius: 8px;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.card img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.card .content {
-  padding: 1rem;
-}
-
-.card h3 {
-  margin-top: 0;
-}
-
-.two-column {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 3rem;
-  align-items: center;
-}
-
-.two-column img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.methods {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.75rem 2rem;
-  padding-left: 1.25rem;
-}
-
-@media (max-width: 900px) {
-  .hero,
-  .two-column {
-    grid-template-columns: 1fr;
-  }
+hr {
+  margin: 4rem 0;
 }
 </style>
