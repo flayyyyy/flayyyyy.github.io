@@ -13,8 +13,6 @@ coverImage:
   src: ./kagome.png
   alt: kagome
 
-ogImage: ./kagome.png
-
 ---
 
 <a href="https://drive.google.com/file/d/1mEX0if3uiUl5duGj5TjAwwMkHxhRgHer/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Link to thesis</a>
