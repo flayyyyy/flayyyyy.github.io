@@ -8,7 +8,6 @@ updatedDate: 27 July 2026
 
 tags:
   - projects
-  - ai
 
 coverImage:
   src: ./kagome.png
