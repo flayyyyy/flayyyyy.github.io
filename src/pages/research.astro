@@ -1,67 +1,62 @@
 ---
 import Base from "@/layouts/Base.astro";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import publications from "@/data/publications.json";
+
+const projects = (await getCollection("post"))
+  .filter(post => post.data.tags?.includes("projects"))
+  .sort(
+    (a, b) =>
+      new Date(b.data.publishDate).getTime() -
+      new Date(a.data.publishDate).getTime()
+  );
 ---
 
 <Base meta={{ title: "Research" }}>
   <article class="prose">
 
-    <h2>Signal Optimization for Superconducting Qubits</h2>
+    {
+      projects.map((project) => (
+        <section class="project">
 
-    <p>
-      This is my ongoing research project as a part of my Departmental Project-I at TIFR. More details will be added later on.
-    </p>
+          <h2 set:html={project.data.displayTitle ?? project.data.title}></h2>
 
-    <img
-      src="/images/research/qubits.png"
-      alt="qubits"
-    />
+          <p>{project.data.description}</p>
 
-    <p>
-      (Image credits: ChatGPT)
-    </p>
+          {
+  project.data.coverImage && (
+    <Image
+  src={project.data.coverImage.src}
+  alt={project.data.coverImage.alt}
+  layout="constrained"
+/>
+  )
+}
 
-    <h2>Superconductivity in Kagome Metal AV<sub>3</sub>Sb<sub>5</sub></h2>
+          <p>
+            <a href={`/posts/${project.id}`}>Read more →</a>
+          </p>
 
-    <p>
-      I conducted this research project as a part of my master's thesis at IIT Roorkee. The project was initiated by Dr. Narayan Mohanta.
-    </p>
 
-    <img
-      src="/images/research/kagome.png"
-      alt="kagome"
-    />
-
-    <p>
-      (Image credits: ChatGPT)
-    </p>
-
-    <p>
-      <a href="/posts/projects/kagome">Read more</a>
-    </p>
-
-    <h2>Partial Crystallization in Li<sub>3</sub>PS<sub>4</sub></h2>
-
-    <p>
-      ...
-    </p>
-
-    <img
-      src="/images/research/materials.jpg"
-      alt="Quantum materials"
-    />
-
-    <p>
-      ...
-    </p>
-
-    <hr />
+        </section>
+      ))
+    }
 
     <h2>Publications</h2>
 
     <ul>
-      <li>...</li>
-      <li>...</li>
-    </ul>
+  {
+    publications.map((pub) => (
+      <li>
+        {pub.author.map(a => `${a.given} ${a.family}`).join(", ")}.
+        <strong>{pub.title}</strong>.
+        <em>{pub["container-title"]}</em>,
+        {pub.issued["date-parts"][0][0]}.
+      </li>
+    ))
+  }
+</ul>
 
   </article>
 </Base>
@@ -71,11 +66,8 @@ import Base from "@/layouts/Base.astro";
   max-width: 760px;
 }
 
-.subtitle {
-  color: var(--secondary);
-  font-size: 1.05rem;
-  margin-top: -0.5rem;
-  margin-bottom: 3rem;
+.project {
+  margin-bottom: 4rem;
 }
 
 img {

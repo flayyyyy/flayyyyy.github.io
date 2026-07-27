@@ -1,0 +1,107 @@
+[
+	{
+		"id": "http://zotero.org/users/12355625/items/KQTKZMZY",
+		"type": "article-journal",
+		"abstract": "Understanding the atomistic mechanism of ion conduction in solid electrolytes is critical for the advancement of all-solid-state batteries. Glass-ceramics, which undergo crystallization from a glass state, frequently exhibit unique properties including enhanced ionic conductivities compared to both the original crystalline and glass forms. Despite these distinctive features, specific details regarding the behavior of ion conduction in glass-ceramics, particularly concerning conduction pathways, remain elusive. In this study, we demonstrate the crystallization process of Li3PS4 glass through molecular dynamics simulations employing machine learning interatomic potentials constructed from first-principles calculation data. Our analyses of Li conduction using the obtained partially crystallized structures reveal that the diffusion barriers of Li decrease as the crystallinity in Li3PS4 glass-ceramics increases. Furthermore, Li displacements predominantly occur in the precipitated crystalline portion, suggesting that percolation conduction plays a significant role in enhanced Li conduction. These findings provide valuable insights for the future utilization of glass-ceramic materials.",
+		"container-title": "The Journal of Physical Chemistry C",
+		"DOI": "10.1021/acs.jpcc.4c01076",
+		"ISSN": "1932-7447",
+		"issue": "24",
+		"journalAbbreviation": "J. Phys. Chem. C",
+		"license": "All rights reserved",
+		"page": "10139-10145",
+		"publisher": "American Chemical Society",
+		"source": "ACS Publications",
+		"title": "Enhanced Ionic Conductivity Through Crystallization of Li3PS4 Glass by Machine Learning Molecular Dynamics Simulations",
+		"URL": "https://doi.org/10.1021/acs.jpcc.4c01076",
+		"volume": "128",
+		"author": [
+			{
+				"family": "Shimizu",
+				"given": "Koji"
+			},
+			{
+				"family": "Bahuguna",
+				"given": "Parth"
+			},
+			{
+				"family": "Mori",
+				"given": "Shigeo"
+			},
+			{
+				"family": "Hayashi",
+				"given": "Akitoshi"
+			},
+			{
+				"family": "Watanabe",
+				"given": "Satoshi"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					10,
+					3
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2024",
+					6,
+					20
+				]
+			]
+		}
+	},
+	{
+		"id": "http://zotero.org/users/12355625/items/8YA52UB2",
+		"type": "article",
+		"abstract": "We investigate the superconducting state in a kagom\\'e lattice, with intertwined charge order and time-reversal symmetry-breaking loop current, using self-consistent Bogoliubov-de Gennes formalism to find the emergent pairing symmetries. Using local and nearest-neighbor attractive interactions, treated within Hartree-Fock mean-field approximation, we obtain all possible pairing symmetries in position space. Our findings indicate that the uniform $s$-wave symmetry, arising in the absence of the charge order and the loop current, modifies to a pair density wave of $s$-wave symmetry of 2$\\times$2 lattice periodicity in the presence of the charge order, and a chiral pair density wave of $d_{x^2-y^2}\\!+\\!id_{xy}$-wave symmetry of the same 2$\\times$2 periodicity in the presence of the charge order and loop current order, in both onsite and nearest-neighbor channels. In the absence of inversion symmetry, such as in the thin-film geometry, Rashba spin-orbit coupling appears, inducing an additional nearest-neighbor triplet $p_x\\pm ip_y$-wave pairing. The results are relevant to superconductivity found in $A$V$_{3}$Sb$_{5}$ ($A$ = K, Rb, Cs), coexisting with a charge order that breaks time-reversal symmetry. We discuss fingerprints of these different pairing symmetries in scanning tunneling microscopy experiments.",
+		"DOI": "10.48550/arXiv.2509.04571",
+		"note": "arXiv:2509.04571 [cond-mat]",
+		"number": "arXiv:2509.04571",
+		"publisher": "arXiv",
+		"source": "arXiv.org",
+		"title": "Superconducting pairing symmetries in charge-ordered kagomé metals",
+		"URL": "http://arxiv.org/abs/2509.04571",
+		"author": [
+			{
+				"family": "Das",
+				"given": "Pujita"
+			},
+			{
+				"family": "Bahuguna",
+				"given": "Parth"
+			},
+			{
+				"family": "Maitra",
+				"given": "Tulika"
+			},
+			{
+				"family": "Mohanta",
+				"given": "Narayan"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					10,
+					3
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2025",
+					9,
+					4
+				]
+			]
+		}
+	}
+]
