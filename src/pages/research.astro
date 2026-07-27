@@ -4,6 +4,12 @@ import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import publications from "@/data/publications.json";
 
+const sortedPublications = [...publications].sort(
+  (a, b) =>
+    new Date(b.issued["date-parts"][0].join("-")).getTime() -
+    new Date(a.issued["date-parts"][0].join("-")).getTime()
+);
+
 const projects = (await getCollection("post"))
   .filter(post => post.data.tags?.includes("projects"))
   .sort(
@@ -17,7 +23,7 @@ const projects = (await getCollection("post"))
   <article class="prose">
 
     {
-      projects.map((project) => (
+  projects.map((project) => (
         <section class="project">
 
           <h2 set:html={project.data.displayTitle ?? project.data.title}></h2>
@@ -43,11 +49,11 @@ const projects = (await getCollection("post"))
       ))
     }
 
-    <h2>Publications</h2>
+    <h2>Publications/Preprints</h2>
 
     <ul>
   {
-    publications.map((pub) => (
+  sortedPublications.map((pub) => (
       <li>
         {pub.author.map(a => `${a.given} ${a.family}`).join(", ")}.
         <strong>{pub.title}</strong>.
@@ -64,6 +70,7 @@ const projects = (await getCollection("post"))
 <style>
 .prose {
   max-width: 760px;
+  margin-top: -3rem;
 }
 
 .project {

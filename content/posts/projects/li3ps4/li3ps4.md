@@ -16,7 +16,9 @@ coverImage:
 
 ---
 
-## IMPORTANT NOTE
+Link to final progress report: <a href="https://drive.google.com/file/d/1jv7VuudVk6tpwnwzF_8jWgYzpTixrI9U/view?usp=drive_link" target="_blank" rel="noopener noreferrer">English</a> | <a href="https://drive.google.com/file/d/1FNg7JPFEdx1W8FKnacMx54nDbjT7xQ1Y/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Japanese</a>
+
+## Important Note
 **This article was written and all the images were generated with the help of ChatGPT to faithfully and pedagogically reproduce my own work.**
 
 ## Why Solid-State Batteries?
@@ -504,3 +506,15 @@ Along the way, I became familiar with **LAMMPS** for large-scale molecular dynam
 Although my internship concluded before the investigation of partial crystallization was complete, the work formed an important step towards that broader objective. Establishing a robust melt-quench workflow, identifying suitable simulation parameters, and initiating annealing studies provided the computational foundation for future investigations into the structural evolution of Li$_3$PS$_4$ and its remarkable ionic transport properties.
 
 For me personally, the project marked my first exposure to large-scale atomistic simulations and machine-learning-assisted materials modelling. It was an experience that deepened my interest in computational condensed matter physics and demonstrated how modern simulation techniques can be used to explore phenomena that are often inaccessible to experiments alone.
+
+## Where This Work Led
+
+My internship concluded before the investigation of partial crystallization was complete. At that stage, the primary objective had been to establish a reliable molecular dynamics workflow capable of generating realistic amorphous Li$_3$PS$_4$ structures and to begin exploring annealing protocols that could induce crystallization.
+
+The computational framework developed during this work later became part of a broader research effort within the Watanabe Laboratory. Building upon these simulations, subsequent studies investigated the structural evolution of annealed Li$_3$PS$_4$ in greater detail and analysed how increasing crystallinity influences lithium-ion transport.
+
+One of the most important findings from this later work was that lithium diffusion does not occur predominantly at the interfaces between crystalline and amorphous regions, as had often been assumed. Instead, molecular dynamics simulations showed that lithium ions preferentially diffuse through the newly formed crystalline regions. As these regions grow and eventually connect to form a continuous network, they provide long-range pathways for ionic transport. This mechanism, known as **percolation conduction**, offers a microscopic explanation for the enhanced ionic conductivity observed in partially crystallized Li$_3$PS$_4$ glass-ceramics.
+
+These findings were eventually published in *The Journal of Physical Chemistry C* as <a href="https://doi.org/10.1021/acs.jpcc.4c01076" target="_blank" rel="noopener noreferrer">*Enhanced Ionic Conductivity Through Crystallization of Li$_3$PS$_4$ Glass by Machine Learning Molecular Dynamics Simulations*</a> (2024), on which I am a co-author.
+
+Looking back, it is rewarding to see how the simulations and workflow developed during my internship contributed to a larger scientific effort. What began as a project focused on constructing reliable melt-quench molecular dynamics simulations ultimately became part of a study that provided new atomistic insight into one of the most intriguing questions in solid-state ionics: why partially crystallized solid electrolytes can outperform both fully crystalline and fully amorphous materials.

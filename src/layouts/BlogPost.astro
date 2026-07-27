@@ -35,7 +35,17 @@ const readingTime: string = remarkPluginFrontmatter.readingTime;
 		<div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
 			{!!headings.length && <TOC headings={headings} />}
 			<div
-				class="prose prose-sm prose-headings:font-semibold prose-headings:text-accent-2 prose-headings:before:absolute prose-headings:before:-ms-4 prose-headings:before:text-muted prose-headings:hover:before:text-accent sm:prose-headings:before:content-['#'] sm:prose-th:before:content-none"
+				class="prose prose-sm prose-headings:font-semibold prose-headings:text-accent-2 prose-h2:before:absolute
+prose-h2:before:-ms-4
+prose-h2:before:text-muted
+prose-h2:hover:before:text-accent
+sm:prose-h2:before:content-['#']
+
+prose-h3:before:absolute
+prose-h3:before:-ms-7
+prose-h3:before:text-muted
+prose-h3:hover:before:text-accent
+sm:prose-h3:before:content-['##']"
 			>
 				<slot />
 				<WebMentions />
@@ -64,12 +74,11 @@ const readingTime: string = remarkPluginFrontmatter.readingTime;
 </BaseLayout>
 
 <script>
-	const scrollBtn = document.getElementById("to-top-btn") as HTMLButtonElement;
-	const targetHeader = document.getElementById("blog-hero") as HTMLDivElement;
+	const scrollBtn = document.getElementById("to-top-btn");
+	const targetHeader = document.getElementById("blog-hero");
 
-	function callback(entries: IntersectionObserverEntry[]) {
+	function callback(entries) {
 		entries.forEach((entry) => {
-			// only show the scroll to top button when the heading is out of view
 			scrollBtn.dataset.show = (!entry.isIntersecting).toString();
 		});
 	}
@@ -80,4 +89,42 @@ const readingTime: string = remarkPluginFrontmatter.readingTime;
 
 	const observer = new IntersectionObserver(callback);
 	observer.observe(targetHeader);
+
+	// -------------------- TOC Scrollspy --------------------
+
+	window.addEventListener("load", () => {
+		const tocLinks = [...document.querySelectorAll(".toc a")];
+
+		const headings = tocLinks
+			.map((link) => document.getElementById(link.hash.slice(1)))
+			.filter(Boolean);
+
+		const tocObserver = new IntersectionObserver(
+			(entries) => {
+				const visible = entries.filter((e) => e.isIntersecting);
+
+				if (!visible.length) return;
+
+				const active = visible.sort(
+					(a, b) => a.boundingClientRect.top - b.boundingClientRect.top
+				)[0];
+
+				tocLinks.forEach((link) => {
+	const isActive = link.hash === `#${active.target.id}`;
+
+	link.classList.toggle("text-accent", isActive);
+	link.classList.toggle("font-semibold", isActive);
+	link.classList.toggle("border-s-2", isActive);
+	link.classList.toggle("border-accent", isActive);
+	link.classList.toggle("ps-2", isActive);
+});
+			},
+			{
+				rootMargin: "0px 0px -65% 0px",
+				threshold: 0,
+			}
+		);
+
+		headings.forEach((h) => tocObserver.observe(h));
+	});
 </script>

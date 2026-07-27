@@ -14,9 +14,15 @@ const toc = generateToc(headings);
 
 <details open class="lg:sticky lg:top-12 lg:order-2 lg:-me-40 lg:basis-64">
 	<summary class="title hover:marker:text-accent cursor-pointer text-lg">Table of Contents</summary>
-	<nav class="ms-4 lg:w-full">
+	<nav class="toc ms-4 lg:w-full">
 		<ol class="mt-4">
 			{toc.map((heading) => <TOCHeading heading={heading} />)}
 		</ol>
 	</nav>
 </details>
+
+<script is:inline>
+window.addEventListener("load", () => {
+  console.log(document.querySelectorAll(".prose h2, .prose h3"));
+});
+</script>

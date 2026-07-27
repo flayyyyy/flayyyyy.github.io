@@ -1,8 +1,7 @@
 ---
 title: "Unconventional Superconductivity in Kagome Metals AV3Sb5"
 displayTitle: "Unconventional Superconductivity in Kagomé Metals AV<sub>3</sub>Sb<sub>5</sub>"
-description: "I did this research projcet as a part of my master's thesis at IIT Roorkee. The project was initiated by and done under the supervision of Dr. Narayan Mohanta."
-
+description: "I did this research project as a part of my master's thesis at IIT Roorkee. The project was initiated by and done under the supervision of Dr. Narayan Mohanta."
 publishDate: "20 May 2023"
 updatedDate: 27 July 2026
 
@@ -14,9 +13,13 @@ coverImage:
   src: ./kagome.png
   alt: kagome
 
+ogImage: "./kagome.png"
+
 ---
 
-## IMPORTANT NOTE
+<a href="https://drive.google.com/file/d/1mEX0if3uiUl5duGj5TjAwwMkHxhRgHer/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Link to thesis</a>
+
+## Important Note
 **This article was written and all the images were generated with the help of ChatGPT to faithfully and pedagogically reproduce my own work.**
 
 ## Problem
