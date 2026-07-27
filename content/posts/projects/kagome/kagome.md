@@ -4,7 +4,7 @@ displayTitle: "Unconventional Superconductivity in Kagomé Metals AV<sub>3</sub>
 description: "I did this research project as a part of my master's thesis at IIT Roorkee. The project was initiated by and done under the supervision of Dr. Narayan Mohanta."
 publishDate: "20 May 2023"
 updatedDate: 27 July 2026
-pinned: true
+# pinned: true
 
 tags:
   - projects

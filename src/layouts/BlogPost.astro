@@ -96,8 +96,22 @@ sm:prose-h3:before:content-['##']"
 		const tocLinks = [...document.querySelectorAll(".toc a")];
 
 		const headings = tocLinks
-			.map((link) => document.getElementById(link.hash.slice(1)))
-			.filter(Boolean);
+  .map((link) => {
+    const id = decodeURIComponent(link.hash.slice(1));
+    const el = document.getElementById(id);
+
+    console.log({
+      text: link.textContent.trim(),
+      href: link.getAttribute("href"),
+      hash: link.hash,
+      id,
+      found: !!el,
+      actualId: el?.id,
+    });
+
+    return el;
+  })
+  .filter(Boolean);
 
 		const tocObserver = new IntersectionObserver(
 			(entries) => {
@@ -110,7 +124,9 @@ sm:prose-h3:before:content-['##']"
 				)[0];
 
 				tocLinks.forEach((link) => {
-	const isActive = link.hash === `#${active.target.id}`;
+	const isActive =
+  decodeURIComponent(link.hash.slice(1)).normalize("NFC") ===
+  active.target.id.normalize("NFC");
 
 	link.classList.toggle("text-accent", isActive);
 	link.classList.toggle("font-semibold", isActive);
