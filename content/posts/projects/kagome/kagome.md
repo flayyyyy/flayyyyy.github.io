@@ -13,7 +13,7 @@ coverImage:
   src: ./kagome.png
   alt: kagome
 
-ogImage: "./kagome.png"
+ogImage: /kagome.png
 
 ---
 
