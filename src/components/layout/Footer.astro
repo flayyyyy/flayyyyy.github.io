@@ -12,13 +12,16 @@ const year = new Date().getFullYear();
 	</div>
 	<nav
   aria-label="Footer"
-  class="flex flex-wrap justify-center gap-x-2 gap-y-2 sm:divide-muted sm:gap-x-0 sm:divide-x"
+  class="flex w-full flex-wrap justify-center gap-x-2 gap-y-2 sm:w-auto sm:divide-muted sm:gap-x-0 sm:divide-x"
 >
 		{
 			menuLinks.map((link) => (
-				<a class="hover:text-global-text px-4 py-2 hover:underline sm:py-0" href={link.path}>
-					{link.title}
-				</a>
+				<a
+  class="hover:text-global-text px-3 py-2 whitespace-nowrap hover:underline sm:py-0"
+  href={link.path}
+>
+  {link.title}
+</a>
 			))
 		}
 	</nav>
