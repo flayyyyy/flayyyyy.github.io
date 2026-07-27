@@ -50,8 +50,6 @@ This idea forms the foundation of the **all-solid-state battery**.
 
 ![Comparison between conventional lithium-ion batteries and all-solid-state batteries.](./battery-comparison.png)
 
-*Figure 1. Conventional lithium-ion batteries use a liquid electrolyte, whereas all-solid-state batteries replace the liquid with a solid ionic conductor.*
-
 Unfortunately, replacing a liquid with a solid introduces an entirely new challenge.
 
 ### The Challenge of Ionic Conduction
@@ -113,8 +111,6 @@ Although its chemical formula appears simple, Li$_3$PS$_4$ exhibits remarkably r
 Its relatively high ionic conductivity, combined with its comparatively simple chemistry, has made it an ideal model system for studying lithium-ion transport in solids.
 
 ![Crystal structure of Li$_3$PS$_4$.](./li3ps4-crystal.png)
-
-*Figure 2. Li$_3$PS$_4$ consists of isolated PS$_4$ tetrahedra with lithium ions occupying the spaces between them.*
 
 ### A Crystal Built from Tetrahedra
 
