@@ -13,7 +13,7 @@ coverImage:
   src: ./qubits.png
   alt: "qubits"
 
-ogImage: "./qubits.png"
+ogImage: "/qubits.webp"
 
 ---
 
