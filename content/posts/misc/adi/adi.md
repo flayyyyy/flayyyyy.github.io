@@ -96,3 +96,11 @@ Adi Kailash isn't a destination that overwhelms with dramatic tourist infrastruc
 The silence, the high-altitude desert, and the immense snow-covered peaks create an atmosphere that's difficult to describe but easy to remember.
 
 Long after the journey ends, it's this feeling—not just the photographs—that stays with you.
+
+## A Quiet Film
+
+Returning home, I realised that photographs alone couldn't capture what the journey felt like. The silence, the slow rhythm of the mountains, the changing light, and the sense of scale all seemed to resist being compressed into a handful of still images.
+
+Inspired by the contemplative style of Werner Herzog's documentaries, I put together a short meditative film from the footage I recorded along the way. Rather than narrating the journey, it simply invites you to sit with the landscape for a few minutes—much like being there.
+
+If you've reached the end of this post, I hope you'll take a moment to <a href="https://youtu.be/1ahTattsy-Y?si=4_Nf3cahnEXT2VFS" target="_blank" rel="noopener noreferrer">watch it</a>.
