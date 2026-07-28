@@ -11,7 +11,9 @@ tags:
 
 coverImage:
   src: ./qubits.png
-  alt: qubits
+  alt: "qubits"
+
+ogImage: "./qubits.png"
 
 ---
 

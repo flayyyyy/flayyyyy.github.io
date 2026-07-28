@@ -10,8 +10,10 @@ tags:
   - projects
 
 coverImage:
-  src: ./kagome.png
-  alt: kagome
+  src: "./kagome.png"
+  alt: "kagome"
+
+ogImage: "./kagome.png"
 
 ---
 

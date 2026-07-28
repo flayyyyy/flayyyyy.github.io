@@ -10,8 +10,10 @@ tags:
   - projects
 
 coverImage:
-  src: ./li3ps4.png
-  alt: li3ps4
+  src: "./li3ps4.png"
+  alt: "li3ps4"
+
+ogImage: "./li3ps4.png"
 
 ---
 

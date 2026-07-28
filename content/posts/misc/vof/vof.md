@@ -13,7 +13,7 @@ coverImage:
   src: "./vof4.webp"
   alt: "vof"
 
-ogImage: "/vof4.jpg"
+ogImage: "/vof4.webp"
 
 ---
 
