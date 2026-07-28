@@ -1,5 +1,5 @@
 ---
-title: ""Adi Kailash: Where Silence Meets the Sacred"
+title: "Adi Kailash: Where Silence Meets the Sacred"
 displayTitle: "Ādi Kailāś: Where Silence Meets the Sacred"
 description: "Adi Kailash, aka Jonglingkong Peak, is a mountain located in the Himalayan mountain range in the Pithoragarh district of Uttarakhand."
 publishDate: "15 Oct 2024"
