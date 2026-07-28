@@ -1,10 +1,10 @@
 <script>
 	const scrollBtn = document.querySelector<HTMLButtonElement>("#to-top-btn");
-	const targetHeader = document.querySelector<HTMLElement>("#blog-hero");
+const targetHeader = document.querySelector<HTMLElement>("#blog-hero");
 
-	if (!scrollBtn || !targetHeader) {
-		throw new Error("Required elements not found.");
-	}
+if (scrollBtn && targetHeader) {
+	// Back-to-top button code here
+}
 
 	const callback: IntersectionObserverCallback = (entries) => {
 		entries.forEach((entry) => {
