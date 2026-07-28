@@ -1,11 +1,85 @@
-<script>
-	const scrollBtn = document.querySelector<HTMLButtonElement>("#to-top-btn");
-const targetHeader = document.querySelector<HTMLElement>("#blog-hero");
+---
+import { type CollectionEntry, render } from "astro:content";
 
-if (scrollBtn && targetHeader) {
-	// Back-to-top button code here
+import Masthead from "@/components/blog/Masthead.astro";
+import TOC from "@/components/blog/TOC.astro";
+import WebMentions from "@/components/blog/webmentions/index.astro";
+
+import BaseLayout from "./Base.astro";
+import MathJax from "@/components/MathJax.astro";
+
+interface Props {
+	post: CollectionEntry<"post">;
 }
 
+const { post } = Astro.props;
+const { ogImage, title, description, updatedDate, publishDate } = post.data;
+const socialImage = ogImage ?? `/og-image/${post.id}.png`;
+const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
+const { headings, remarkPluginFrontmatter } = await render(post);
+const readingTime: string = remarkPluginFrontmatter.readingTime;
+---
+
+<BaseLayout
+	meta={{
+		articleDate,
+		description,
+		ogImage: socialImage,
+		title,
+	}}
+>
+	<MathJax />
+
+    <article class="grow break-words" data-pagefind-body>
+		<div id="blog-hero" class="mb-12"><Masthead content={post} readingTime={readingTime} /></div>
+		<div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+			{!!headings.length && <TOC headings={headings} />}
+			<div
+				class="prose prose-sm prose-headings:font-semibold prose-headings:text-accent-2 prose-h2:before:absolute
+prose-h2:before:-ms-4
+prose-h2:before:text-muted
+prose-h2:hover:before:text-accent
+sm:prose-h2:before:content-['#']
+
+prose-h3:before:absolute
+prose-h3:before:-ms-7
+prose-h3:before:text-muted
+prose-h3:hover:before:text-accent
+sm:prose-h3:before:content-['##']"
+			>
+				<slot />
+				<WebMentions />
+			</div>
+		</div>
+	</article>
+	<button
+		class="hover:border-link fixed end-4 bottom-8 z-90 flex h-10 w-10 translate-y-28 cursor-pointer items-center justify-center rounded-full border-2 border-transparent bg-zinc-200 text-3xl opacity-0 transition-all transition-discrete duration-300 data-[show=true]:translate-y-0 data-[show=true]:opacity-100 sm:end-8 sm:h-12 sm:w-12 dark:bg-zinc-700"
+		data-show="false"
+		id="to-top-btn"
+	>
+		<span class="sr-only">Back to top</span>
+		<svg
+			aria-hidden="true"
+			class="h-6 w-6"
+			fill="none"
+			focusable="false"
+			stroke="currentColor"
+			stroke-width="2"
+			viewBox="0 0 24 24"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path d="M4.5 15.75l7.5-7.5 7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		</svg>
+	</button>
+</BaseLayout>
+
+<script>
+	const scrollBtn =
+	document.getElementById("to-top-btn") as HTMLButtonElement | null;
+const targetHeader =
+	document.getElementById("blog-hero") as HTMLElement | null;
+
+if (scrollBtn && targetHeader) {
 	const callback: IntersectionObserverCallback = (entries) => {
 		entries.forEach((entry) => {
 			scrollBtn.dataset.show = String(!entry.isIntersecting);
@@ -21,20 +95,24 @@ if (scrollBtn && targetHeader) {
 
 	const observer = new IntersectionObserver(callback);
 	observer.observe(targetHeader);
+}
 
 	// -------------------- TOC Scrollspy --------------------
 
 	window.addEventListener("load", () => {
 		const tocLinks = [
-			...document.querySelectorAll<HTMLAnchorElement>(".toc a"),
-		];
+	...document.querySelectorAll<HTMLAnchorElement>(".toc a"),
+];
 
 		const headings = tocLinks
-			.map((link) => {
-				const id = decodeURIComponent(link.hash.slice(1));
-				return document.getElementById(id);
-			})
-			.filter((el): el is HTMLElement => el !== null);
+  .map((link) => {
+    const id = decodeURIComponent(link.hash.slice(1));
+    const el = document.getElementById(id);
+
+
+    return el;
+  })
+	.filter((el): el is HTMLElement => el !== null);
 
 		const tocObserver = new IntersectionObserver(
 			(entries) => {
@@ -43,27 +121,27 @@ if (scrollBtn && targetHeader) {
 				if (!visible.length) return;
 
 				const active = visible.sort(
-					(a, b) => a.boundingClientRect.top - b.boundingClientRect.top,
-				)[0];
+	(a, b) => a.boundingClientRect.top - b.boundingClientRect.top,
+)[0];
 
-				if (!active) return;
+if (!active) return;
 
-				tocLinks.forEach((link) => {
-					const isActive =
-						decodeURIComponent(link.hash.slice(1)).normalize("NFC") ===
-						active.target.id.normalize("NFC");
+tocLinks.forEach((link) => {
+	const isActive =
+  decodeURIComponent(link.hash.slice(1)).normalize("NFC") ===
+  active.target.id.normalize("NFC");
 
-					link.classList.toggle("text-accent", isActive);
-					link.classList.toggle("font-semibold", isActive);
-					link.classList.toggle("border-s-2", isActive);
-					link.classList.toggle("border-accent", isActive);
-					link.classList.toggle("ps-2", isActive);
-				});
+	link.classList.toggle("text-accent", isActive);
+	link.classList.toggle("font-semibold", isActive);
+	link.classList.toggle("border-s-2", isActive);
+	link.classList.toggle("border-accent", isActive);
+	link.classList.toggle("ps-2", isActive);
+});
 			},
 			{
 				rootMargin: "0px 0px -65% 0px",
 				threshold: 0,
-			},
+			}
 		);
 
 		headings.forEach((h) => tocObserver.observe(h));
