@@ -10,10 +10,10 @@ tags:
   - treks
 
 coverImage:
-  src: ./vof4.webp
-  alt: vof1
+  src: "./vof4.webp"
+  alt: "vof1"
 
-ogImage: /images/vof4.jpg
+ogImage: "/images/vof4.jpg"
 
 ---
 
