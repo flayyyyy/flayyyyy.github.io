@@ -16,8 +16,8 @@ const projects = (await getCollection("post"))
 ---
 
 <Base meta={{ title: "Research" }}>
+<h1 class="title mb-12">Research</h1>
   <article class="prose">
-
     {
   projects.map((project) => (
         <section class="project">
@@ -98,8 +98,7 @@ const projects = (await getCollection("post"))
 
 <style>
 .prose {
-  max-width: 760px;
-  margin-top: -3rem;
+max-width: 760px;
 }
 
 .project {
