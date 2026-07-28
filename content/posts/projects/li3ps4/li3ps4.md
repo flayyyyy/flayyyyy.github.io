@@ -1,6 +1,6 @@
 ---
-title: "Partial Crystallization of Li3PS4 Under Melt-Quenching"
-displayTitle: "Partial Crystallization of Li<sub>3</sub>PS<sub>4</sub> Under Melt-Quenching"
+title: "Partial Crystallization of Li3PS4 under Melt-Quenching"
+displayTitle: "Partial Crystallization of Li<sub>3</sub>PS<sub>4</sub> under Melt-Quenching"
 description: "This research projcet was a part of my ESEP-G internsip at UTokyo. I was a part of the Watanabe Laboratory and my work was supervised by Dr. Satoshi Watanabe and Dr. Koji Shimizu."
 
 publishDate: "17 Jul 2021"

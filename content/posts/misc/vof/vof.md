@@ -1,6 +1,6 @@
 ---
-title: "Photos Taken Over The Hike (Valley of Flowers/Lake Hemkund)"
-displayTitle: "Photos Taken Over The Hike (Valley of Flowers/Lake Hemkund)"
+title: "Photos Taken Over the Hike (Valley of Flowers/Lake Hemkund)"
+displayTitle: "Photos Taken Over the Hike (Valley of Flowers/Lake Hemkund)"
 description: "Valle of Flowers is a UNESCO site in the Indian state of Uttarakhand."
 publishDate: "17 Aug 2022"
 updatedDate: 28 July 2026

@@ -1,6 +1,6 @@
 ---
-title: "Snow, stars, Himalayan panoramas, and a surprise detour into Nepal"
-displayTitle: "Snow, stars, Himalayan panoramas, and a surprise detour into Nepal"
+title: "Snow, Stars, Himalayan Panoramas, and a Surprise Detour into Nepal"
+displayTitle: "Snow, Stars, Himalayan Panoramas, and a Surprise Detour into Nepal"
 description: "This logs my travel to the town of Munsyari in Uttarakhand."
 publishDate: "27 Dec 2024"
 updatedDate: 29 July 2026
