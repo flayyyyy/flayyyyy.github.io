@@ -49,12 +49,45 @@ const projects = (await getCollection("post"))
 
     <ul>
   {
-  sortedPublications.map((pub) => (
+    sortedPublications.map((pub) => (
       <li>
-        {pub.author.map(a => `${a.given} ${a.family}`).join(", ")}.
-        <strong>{pub.title}</strong>.
-        <em>{pub["container-title"]}</em>,
+        {pub.author.map((a) => `${a.given} ${a.family}`).join(", ")}.{" "}
+
+<strong>{pub.title}</strong>.{" "}
+
+{pub["container-title"] ? (
+  <em>{pub["container-title"]}</em>
+) : (
+  <em>{pub.publisher}</em>
+)},
+        {" "}
         {pub.issued["date-parts"]![0]![0]}.
+
+        {pub.DOI && (
+          <>
+            {" "}
+            <a
+              href={`https://doi.org/${pub.DOI}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              [DOI]
+            </a>
+          </>
+        )}
+
+        {pub.URL && pub.URL !== `https://doi.org/${pub.DOI}` && (
+          <>
+            {" "}
+            <a
+              href={pub.URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              [Link]
+            </a>
+          </>
+        )}
       </li>
     ))
   }
