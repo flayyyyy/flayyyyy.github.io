@@ -42,8 +42,6 @@ Far away from city lights, Munsyari revealed one of the darkest skies I've ever 
 
 Standing outside in freezing temperatures with a camera and tripod wasn't exactly comfortable, but moments like these make you forget about the cold.
 
-![Star-filled sky over Munsyari](./mun1.webp)
-
 ![Night sky with Jupiter and the winter constellations](./mun6.webp)
 
 The night wasn't entirely still either. During a few long exposures, a couple of satellites quietly drifted across the frame. It's fascinating how alive the night sky feels once your eyes adjust to the darkness.
