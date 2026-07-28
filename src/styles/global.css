@@ -135,8 +135,8 @@
 	@import "./components/admonition.css";
 	@import "./components/github-card.css";
 	mjx-container svg {
-  display: inline !important;
-}
+		display: inline;
+	}
 
 	.cactus-link {
 		@apply hover:decoration-link underline underline-offset-2 hover:decoration-2;

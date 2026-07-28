@@ -1,22 +1,18 @@
 ---
-import Base from "@/layouts/Base.astro";
-import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import publications from "@/data/publications.json";
+import Base from "@/layouts/Base.astro";
 
 const sortedPublications = [...publications].sort(
-  (a, b) =>
-    new Date(b.issued["date-parts"][0].join("-")).getTime() -
-    new Date(a.issued["date-parts"][0].join("-")).getTime()
+	(a, b) =>
+		new Date(b.issued["date-parts"]?.[0]?.join("-") ?? "1970-01-01").getTime() -
+		new Date(a.issued["date-parts"]?.[0]?.join("-") ?? "1970-01-01").getTime(),
 );
 
 const projects = (await getCollection("post"))
-  .filter(post => post.data.tags?.includes("projects"))
-  .sort(
-    (a, b) =>
-      new Date(b.data.publishDate).getTime() -
-      new Date(a.data.publishDate).getTime()
-  );
+	.filter((post) => post.data.tags?.includes("projects"))
+	.sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime());
 ---
 
 <Base meta={{ title: "Research" }}>
@@ -58,7 +54,7 @@ const projects = (await getCollection("post"))
         {pub.author.map(a => `${a.given} ${a.family}`).join(", ")}.
         <strong>{pub.title}</strong>.
         <em>{pub["container-title"]}</em>,
-        {pub.issued["date-parts"][0][0]}.
+        {pub.issued["date-parts"]![0]![0]}.
       </li>
     ))
   }

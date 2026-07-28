@@ -18,8 +18,8 @@ export const siteConfig: SiteConfig = {
 	// HTML lang property, found in src/layouts/Base.astro L:18 & astro.config.ts L:48
 	lang: "en-GB",
 	// Meta property, found in src/components/BaseHead.astro L:42
-  ogLocale: "en_GB",
-  // Determines whether to show the logo in the templates header
+	ogLocale: "en_GB",
+	// Determines whether to show the logo in the templates header
 	showLogo: false,
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
@@ -33,35 +33,35 @@ export const siteConfig: SiteConfig = {
 
 // Used to generate links in both the Header & Footer.
 export const menuLinks: {
-  path: string;
-  title: string;
-  external?: boolean;
+	path: string;
+	title: string;
+	external?: boolean;
 }[] = [
-  {
-    path: "/",
-    title: "Home",
-  },
-  {
-    path: "/about/",
-    title: "About",
-  },
-  {
-    path: "/research/",
-    title: "Research",
-  },
-  {
-    path: "/posts/",
-    title: "Blog",
-  },
-  {
-    path: "/notes/",
-    title: "Notes",
-  },
-  {
-    path: "https://drive.google.com/file/d/1bcH_kdfVLhrYQWMylXHUiEgtPOFBaojj/view?usp=drive_link",
-    title: "CV",
-	external: true,
-  },
+	{
+		path: "/",
+		title: "Home",
+	},
+	{
+		path: "/about/",
+		title: "About",
+	},
+	{
+		path: "/research/",
+		title: "Research",
+	},
+	{
+		path: "/posts/",
+		title: "Blog",
+	},
+	{
+		path: "/notes/",
+		title: "Notes",
+	},
+	{
+		path: "https://drive.google.com/file/d/1bcH_kdfVLhrYQWMylXHUiEgtPOFBaojj/view?usp=drive_link",
+		title: "CV",
+		external: true,
+	},
 ];
 
 // https://expressive-code.com/reference/configuration/
