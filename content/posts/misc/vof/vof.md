@@ -11,9 +11,9 @@ tags:
 
 coverImage:
   src: "./vof4.webp"
-  alt: "vof1"
+  alt: "vof"
 
-ogImage: "./vof4.jpg"
+ogImage: "/vof4.jpg"
 
 ---
 
