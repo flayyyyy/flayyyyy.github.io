@@ -10,7 +10,7 @@ tags:
   - projects
 
 coverImage:
-  src: "./kagome.png"
+  src: "./kagome.webp"
   alt: "kagome"
 
 ogImage: "/kagome.webp"
@@ -69,7 +69,7 @@ At first glance, the geometry appears deceptively simple.
 
 Three atoms occupy every unit cell, arranged as corner-sharing triangles.
 
-![The Kagomé lattice.](./kagome-lattice.png)
+![The Kagomé lattice.](./kagome-lattice.webp)
 
 Unlike square or honeycomb lattices, however, this geometry introduces **geometric frustration**—a situation where neighbouring interactions cannot all be simultaneously satisfied.
 
@@ -526,7 +526,7 @@ $$
 
 producing a smooth spectrum suitable for visualization.
 
-![Calculated density of states.](./dos.png)
+![Calculated density of states.](./dos.webp)
 
 The DOS acts almost like a fingerprint of the electronic state.
 
@@ -571,7 +571,7 @@ $$
 
 Unlike the DOS, which averages over the entire lattice, the LDOS measures the electronic spectrum at an individual lattice site.
 
-![Spatial map of the LDOS.](./ldos.png)
+![Spatial map of the LDOS.](./ldos.webp)
 
 This quantity possesses particular experimental importance because it is precisely what is measured using **Scanning Tunnelling Microscopy (STM)**.
 
@@ -653,7 +653,7 @@ As this occurs,
 
 Rather than examining a single spectrum, the calculation follows the evolution of all eigenvalues as the chemical potential changes.
 
-![Energy eigenvalues as a function of chemical potential.](./bands-vs-mu.png)
+![Energy eigenvalues as a function of chemical potential.](./bands-vs-mu.webp)
 
 Several interesting features become immediately visible.
 
@@ -673,7 +673,7 @@ One of the principal goals of any theoretical model is to identify the stable ph
 
 After solving the BdG equations over a broad range of interaction strengths and chemical potentials, it becomes possible to construct a phase diagram.
 
-![Calculated phase diagram.](./phase-diagram.png)
+![Calculated phase diagram.](./phase-diagram.webp)
 
 Each point corresponds to a completely converged microscopic solution.
 

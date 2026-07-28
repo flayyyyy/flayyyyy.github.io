@@ -10,7 +10,7 @@ tags:
   - projects
 
 coverImage:
-  src: ./qubits.png
+  src: "./qubits.webp"
   alt: "qubits"
 
 ogImage: "/qubits.webp"

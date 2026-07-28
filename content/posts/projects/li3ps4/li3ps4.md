@@ -10,7 +10,7 @@ tags:
   - projects
 
 coverImage:
-  src: "./li3ps4.png"
+  src: "./li3ps4.webp"
   alt: "li3ps4"
 
 ogImage: "/li3ps4.webp"
@@ -50,7 +50,7 @@ Replacing the electrolyte with a solid immediately eliminates leakage while sign
 
 This idea forms the foundation of the **all-solid-state battery**.
 
-![Comparison between conventional lithium-ion batteries and all-solid-state batteries.](./battery-comparison.png)
+![Comparison between conventional lithium-ion batteries and all-solid-state batteries.](./battery-comparison.webp)
 
 Unfortunately, replacing a liquid with a solid introduces an entirely new challenge.
 
@@ -112,7 +112,7 @@ Although its chemical formula appears simple, Li$_3$PS$_4$ exhibits remarkably r
 
 Its relatively high ionic conductivity, combined with its comparatively simple chemistry, has made it an ideal model system for studying lithium-ion transport in solids.
 
-![Crystal structure of Li$_3$PS$_4$.](./li3ps4-crystal.png)
+![Crystal structure of Li$_3$PS$_4$.](./li3ps4-crystal.webp)
 
 ### A Crystal Built from Tetrahedra
 
