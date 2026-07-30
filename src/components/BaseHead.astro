@@ -6,6 +6,7 @@ import "@/styles/global.css";
 
 type Props = SiteMeta;
 
+const GA_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 const { articleDate, description, ogImage, title } = Astro.props;
 
 const titleSeparator = "•";
@@ -82,3 +83,23 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url
 }
 
 <meta content={Astro.generator} name="generator" />
+
+{
+	import.meta.env.PROD && GA_ID && (
+		<>
+			<script
+				async
+				src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+			/>
+
+			<script is:inline>
+				{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', '${GA_ID}');
+				`}
+			</script>
+		</>
+	)
+}
