@@ -15,7 +15,7 @@ const projects = (await getCollection("post"))
 	.sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime());
 ---
 
-<Base meta={{ title: "Research" }}>
+<Base meta={{ title: "Research", noindex: true }}>
 <h1 class="title mb-12">Research</h1>
   <article class="prose">
     {
